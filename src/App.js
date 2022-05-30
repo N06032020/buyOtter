@@ -2,6 +2,33 @@ import Card from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
+const arr = [
+  {
+    title: 'Выдра Apple', 
+    price: 12999,
+    imageUrl: '/img/content/o1.png'
+  },
+
+  {
+    title: 'Выдра Google', 
+    price: 11999,
+    imageUrl: '/img/content/o2.png'
+  },
+
+  {
+    title: 'Выдра Samsung', 
+    price: 10999,
+    imageUrl: '/img/content/o3.png'
+  },
+
+  {
+    title: 'Выдра Microsoft', 
+    price: 9999,
+    imageUrl: '/img/content/o4.png'
+  },
+];
+
+
 function App() {
   return (
     <div className="wrapper">
@@ -22,10 +49,9 @@ function App() {
         </div>
 
         <div className="cardWrapper">
-          <Card/>
-          <Card/>
-          <Card/>
-          <Card/>
+          {arr.map((obj) => (
+            <Card title={obj.title} price={obj.price} imageUrl={obj.imageUrl} onClick={() => console.log(obj)} />
+          ))}
         </div>
 
       </div>
