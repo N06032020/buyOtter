@@ -35,7 +35,11 @@
       li {
         margin-right: 30px;
       }
-  
+    
+      img {
+        cursor: pointer;
+      }
+      
       img {
         &:hover {
           transition: 0.5s ease;
